@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const button = document.querySelector(".button");
 const clear = document.querySelector(".clear");
 const defaultGrid = 16;
+let parsed = defaultGrid;
 
 // Function to create the grid
 function createGrid(n) {
@@ -43,7 +44,7 @@ function mouseover(e) {
 // Event listener for changing grid size
 button.addEventListener("click", () => {
   let choice = prompt("Change Grid Size To:");
-  let parsed = parseInt(choice, 10);
+  parsed = parseInt(choice, 10);
   if (!isNaN(parsed) && parsed >= 1 && parsed <= 100) {
     createGrid(parsed);
   }
@@ -51,7 +52,7 @@ button.addEventListener("click", () => {
 
 // Event listener for clearing the grid
 clear.addEventListener("click", () => {
-  createGrid(defaultGrid); // Reset to default grid size
+  createGrid(parsed); // Reset to default grid size
 });
 
 // Initial call to create the default grid
