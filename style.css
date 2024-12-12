@@ -1,0 +1,34 @@
+body {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.container {
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    border: 5px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.gridRow {
+    height: 5px;
+    display: flex;
+    justify-content: stretch;
+    flex: 1 1;
+    margin: 0;
+}
+
+.gridPixel {
+    flex: 1 1;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0;
+}
